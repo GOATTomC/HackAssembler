@@ -11,6 +11,7 @@ import java.util.List;
 import com.tomcoldenhoff.code.Code;
 import com.tomcoldenhoff.parsing.ParseData;
 import com.tomcoldenhoff.parsing.Parser;
+import com.tomcoldenhoff.writing.Writer;
 
 /**
  * Assembler class contains all the logic to assemble the given file.
@@ -57,7 +58,9 @@ public class Assembler {
             reader.close();
 
             // Write the translation to a hack file
-            
+            Writer writer = new Writer();
+            String str = filePath.split("\\.")[0];
+            writer.Write(str, translations);
 
 
 
