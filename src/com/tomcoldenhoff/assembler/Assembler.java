@@ -51,9 +51,15 @@ public class Assembler {
 
             // Translate the parsed data into binary code
             Code translater = new Code();
-            translater.translate(parsedDatas);
+            List<String> translations = translater.translate(parsedDatas);
 
+            // Close the reader because we are done reading
             reader.close();
+
+            // Write the translation to a hack file
+            
+
+
 
         } catch (FileNotFoundException e) {
 

@@ -30,4 +30,8 @@ public class ParseData {
     public String getValue(String keyName) {
         return parseData.get(keyName);
     }
+
+    public boolean isEmpty() {
+        return parseData.size() == 0;
+    }
 }
